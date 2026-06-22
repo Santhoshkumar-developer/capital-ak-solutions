@@ -29,15 +29,15 @@
           extend: {
             colors: {
               navy: {
-                800: "#1a2238",
-                900: "#0f172a",
-                950: "#0a0f1d",
+                800: "#4a1b24",
+                900: "#331018",
+                950: "#fffafc",
               },
               gold: {
-                400: "#facc15",
-                500: "#eab308",
-                600: "#ca8a04",
-                accent: "#d4af37", // Premium gold
+                400: "#ffd1e0",
+                500: "#ffc0d0",
+                600: "#ffb6c1",
+                accent: "#ffb6c1", // Soft pink accent (repurposed)
               },
             },
             fontFamily: {
@@ -79,12 +79,6 @@
 
       .hide-item {
         display: none !important;
-      }
-
-      .catalog-tab-active {
-        background-color: #d4af37;
-        color: #0a0f1d;
-        border-color: #d4af37;
       }
 
       /* Hide scrollbar for carousels */
@@ -140,23 +134,34 @@
   </head>
 
   <body
-    class="bg-navy-950 text-slate-300 font-sans antialiased selection:bg-gold-500 selection:text-navy-950 pb-20 lg:pb-0"
+    class="bg-navy-950 text-pink-800 font-sans antialiased selection:bg-gold-500 selection:text-white pb-20 lg:pb-0"
   >
     <!-- Header / Nav -->
     <header
-      class="fixed w-full top-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-white/5 transition-all duration-300"
+      class="fixed w-full top-0 z-50 bg-navy-950/95 backdrop-blur-md border-b border-pink-100 transition-all duration-300"
       id="navbar"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <div class="flex-shrink-0 flex items-center">
-            <a
-              href="#"
-              class="font-heading font-bold text-3xl tracking-wider text-white"
-            >
-              ZEPTRA<span class="text-gold-accent">.</span>
-            </a>
-          </div>
+         <div class="flex-shrink-0 flex items-center">
+  <a href="#" class="flex items-start">
+    <span class="font-heading text-3xl font-extrabold tracking-[0.18em] text-pink-900">
+      ZEPTRA
+      <sup
+        class="inline-flex items-center justify-center
+               w-5 h-5
+               ml-[-15px]
+               border-2 border-black rounded-full
+               relative -top-3"
+      >
+        <span class="text-[9px] font-black tracking-[-0.5px] text-black leading-none">
+          TM
+        </span>
+      </sup>
+    </span>
+    <span class="text-gold-accent text-3xl font-bold">.</span>
+  </a>
+</div>
           <nav class="hidden lg:flex space-x-6 items-center">
             <a
               href="#about"
@@ -175,7 +180,7 @@
             >
             <a
               href="#contact"
-              class="text-sm font-medium px-5 py-2.5 rounded-full border border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-navy-950 transition-all"
+              class="text-sm font-medium px-5 py-2.5 rounded-full bg-pink-900 text-white hover:bg-pink-800 transition-all shadow-lg"
               >Get in Touch</a
             >
           </nav>
@@ -185,29 +190,29 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen bg-navy-950 overflow-hidden pt-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 min-h-screen">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 min-h-screen">
         <!-- Left Content -->
         <div
-          class="flex items-center justify-center px-6 lg:px-16 relative z-20"
+          class="flex items-center justify-center px-6 lg:px-0 relative z-20 min-h-[70vh] lg:min-h-[450px]"
         >
-          <div class="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+          <div class="w-full max-w-2xl mx-auto lg:mx-0 text-center lg:text-left bg-white rounded-[30px] p-8 lg:p-12 lg:h-full lg:flex lg:flex-col lg:justify-center">
             <span
-              class="inline-flex items-center px-4 py-2 rounded-full border border-gold-accent/30 text-gold-accent text-sm mb-6"
+              class="inline-flex items-center px-4 py-2 rounded-full border-2 border-pink-900/30 text-pink-900 font-semibold text-sm mb-6"
             >
               Premium Corporate Event Solutions
             </span>
 
             <h1
-              class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight mb-6"
+              class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-pink-900 leading-tight mb-6"
             >
-              Creating Experiences.
+              Creating Experiences
               <br />
-              Building Connections.
+              Building Connections
               <br />
               <span class="gold-gradient-text"> Delivering Excellence. </span>
             </h1>
 
-            <p class="text-lg text-slate-400 mb-10 leading-relaxed">
+            <p class="text-lg text-black mb-10 leading-relaxed">
               From conferences and employee engagement programs to product
               launches and corporate celebrations, ZEPTRA creates unforgettable
               experiences that inspire people and strengthen brands.
@@ -216,14 +221,14 @@
             <div class="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                class="px-8 py-4 rounded-full bg-gold-accent text-navy-950 font-semibold hover:scale-105 transition-all shadow-lg"
+                class="px-6 py-2 rounded-full bg-pink-900 text-white font-semibold hover:bg-pink-800 transition-all shadow-lg text-sm"
               >
                 Request Proposal
               </a>
 
               <a
                 href="#services"
-                class="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white/10 transition-all"
+                class="px-6 py-2 rounded-full bg-white border border-pink-900 text-pink-900 hover:bg-pink-50 transition-all text-sm"
               >
                 Explore Services
               </a>
@@ -232,33 +237,23 @@
         </div>
 
         <!-- Right Image Slider -->
-        <div class="relative h-[50vh] sm:h-[60vh] lg:h-auto mt-10 lg:mt-0">
+        <div class="relative h-[35vh] sm:h-[40vh] lg:h-[450px] mt-6 lg:mt-12 px-6 lg:px-0">
           <div class="hero-slider w-full h-full">
             <div class="slide active">
-              <img src="assets/img/banner1.png" alt="Corporate Event" />
+              <img src="assets/img/banner1.png" alt="Corporate Event" class="object-cover w-full h-full rounded-[30px]" />
             </div>
 
             <div class="slide">
-              <img src="assets/img/banner2.png" alt="Conference" />
+              <img src="assets/img/banner2.png" alt="Conference" class="object-cover w-full h-full rounded-[30px]" />
             </div>
 
             <div class="slide">
-              <img src="assets/img/banner3.png" alt="Employee Engagement" />
+              <img src="assets/img/banner3.png" alt="Employee Engagement" class="object-cover w-full h-full rounded-[30px]" />
             </div>
 
             <div class="slide">
-              <img src="assets/img/banner4.png" alt="Product Launch" />
+              <img src="assets/img/banner4.png" alt="Product Launch" class="object-cover w-full h-full rounded-[30px]" />
             </div>
-
-            <!-- Top Gradient -->
-            <div
-              class="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-transparent to-transparent"
-            ></div>
-
-            <!-- Left Blend Only -->
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-navy-950/70 via-navy-950/10 to-transparent"
-            ></div>
           </div>
 
           <!-- Slider Dots -->
@@ -286,17 +281,17 @@
               Who We Are
             </h2>
             <h3
-              class="text-3xl md:text-4xl font-heading font-bold text-white mb-6"
+              class="text-3xl md:text-4xl font-heading font-bold text-pink-900 mb-6"
             >
               A Professionally Managed Corporate Experiences Partner
             </h3>
-            <p class="text-slate-400 leading-relaxed mb-6">
+            <p class="text-black leading-relaxed mb-6">
               ZEPTRA stands at the intersection of creativity and flawless
               execution. We specialize in conceptualizing and delivering
               high-impact corporate events, engaging employee programs, and
               premium customized gifting solutions.
             </p>
-            <p class="text-slate-400 leading-relaxed">
+            <p class="text-black leading-relaxed">
               From large-scale conferences and exhibitions to intimate product
               launches and strategic brand activations, our dedicated team
               ensures every touchpoint reflects your brand's excellence and
@@ -307,7 +302,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal delay-200">
             <!-- Vision Card -->
             <div
-              class="glass-card p-8 rounded-2xl border border-white/10 hover:border-gold-accent/50 transition-colors group relative overflow-hidden"
+              class="glass-card p-8 rounded-2xl border border-pink-100 hover:border-gold-accent/50 transition-colors group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-32 h-32 bg-gold-accent/10 rounded-full blur-2xl group-hover:bg-gold-accent/20 transition-all"
@@ -315,17 +310,17 @@
               <i
                 class="fas fa-eye text-3xl text-gold-accent mb-4 transform group-hover:scale-110 transition-transform"
               ></i>
-              <h4 class="text-xl font-heading font-semibold text-white mb-3">
+              <h4 class="text-xl font-heading font-semibold text-pink-900 mb-3">
                 Our Vision
               </h4>
-              <p class="text-sm text-slate-400">
+              <p class="text-sm text-black">
                 To be India's most trusted corporate event and engagement
                 partner, setting new benchmarks in experiential excellence.
               </p>
             </div>
             <!-- Mission Card -->
             <div
-              class="glass-card p-8 rounded-2xl border border-white/10 hover:border-gold-accent/50 transition-colors group relative overflow-hidden md:translate-y-8"
+              class="glass-card p-8 rounded-2xl border border-pink-100 hover:border-gold-accent/50 transition-colors group relative overflow-hidden md:translate-y-8"
             >
               <div
                 class="absolute top-0 right-0 w-32 h-32 bg-gold-accent/10 rounded-full blur-2xl group-hover:bg-gold-accent/20 transition-all"
@@ -333,10 +328,10 @@
               <i
                 class="fas fa-bullseye text-3xl text-gold-accent mb-4 transform group-hover:scale-110 transition-transform"
               ></i>
-              <h4 class="text-xl font-heading font-semibold text-white mb-3">
+              <h4 class="text-xl font-heading font-semibold text-pink-900 mb-3">
                 Our Mission
               </h4>
-              <p class="text-sm text-slate-400">
+              <p class="text-sm text-black">
                 To deliver world-class experiences that inspire collaboration,
                 strengthen relationships, and create lasting value for our
                 clients.
@@ -347,225 +342,101 @@
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (Modern Cards) -->
+           
 
-    <section id="services" class="py-24 bg-navy-900 relative overflow-hidden">
+    <section id="services" class="py-24 bg-navy-950 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Heading -->
-        <div class="text-center max-w-3xl mx-auto mb-20 reveal">
-          <h2
-            class="text-gold-accent font-semibold tracking-widest uppercase text-sm mb-3"
-          >
-            What We Do
-          </h2>
-          <h3
-            class="text-4xl md:text-6xl font-heading font-bold text-white mb-6"
-          >
-            Event Solutions That Inspire
-          </h3>
-          <p class="text-slate-400 text-lg">
-            From corporate events to employee engagement programs, we deliver
-            exceptional experiences that leave lasting impressions.
-          </p>
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+          <h2 class="text-gold-accent font-semibold tracking-widest uppercase text-sm mb-3">What We Do</h2>
+          <h3 c class="text-3xl md:text-5xl font-heading font-bold text-pink-900 mb-6">Event Solutions That Inspire</h3>
+          <p class="text-black text-lg">From corporate events to employee engagement programs, we deliver exceptional experiences that leave lasting impressions.</p>
         </div>
 
-        <!-- Service 1 -->
-        <div class="grid lg:grid-cols-2 gap-14 items-center mb-28">
-          <div class="overflow-hidden rounded-3xl group">
-            <img
-              src="assets/img/service1.png"
-              alt="Corporate Events"
-              class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover group-hover:scale-110 transition duration-700"
-            />
-          </div>
-
-          <div>
-            <span class="text-gold-accent uppercase tracking-[4px] text-sm">
-              Corporate Events
-            </span>
-
-            <h3 class="text-4xl font-heading font-bold text-white mt-4 mb-6">
-              Corporate Event Management
-            </h3>
-
-            <p class="text-slate-400 leading-relaxed mb-6">
-              We create impactful corporate experiences ranging from annual day
-              celebrations and award nights to leadership summits and executive
-              gatherings.
-            </p>
-
-            <ul class="space-y-3 text-slate-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="glass-card group overflow-hidden rounded-2xl p-6 bg-navy-900/10 hover:bg-white/5 hover:backdrop-blur-md hover:shadow-2xl transform group-hover:-translate-y-1 transition duration-300">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="assets/img/service1.png" alt="Corporate Events" class="w-full h-44 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <span class="text-gold-accent uppercase tracking-[4px] text-sm mb-2 inline-block">Corporate Events</span>
+            <h4 class="text-xl font-heading font-bold text-navy-900 mb-2">Corporate Event Management</h4>
+            <p class="text-black text-sm mb-4">We create impactful corporate experiences ranging from annual day celebrations and award nights to leadership summits and executive gatherings.</p>
+            <ul class="text-black space-y-2 mb-4 text-sm">
               <li>✓ Annual Day Celebrations</li>
               <li>✓ Leadership Summits</li>
               <li>✓ Awards & Recognition Events</li>
-              <li>✓ Corporate Gatherings</li>
             </ul>
           </div>
-        </div>
 
-        <!-- Service 2 -->
-        <div class="grid lg:grid-cols-2 gap-14 items-center mb-28">
-          <div class="order-2 lg:order-1">
-            <span class="text-gold-accent uppercase tracking-[4px] text-sm">
-              Conferences
-            </span>
-
-            <h3 class="text-4xl font-heading font-bold text-white mt-4 mb-6">
-              Conferences & Seminars
-            </h3>
-
-            <p class="text-slate-400 leading-relaxed mb-6">
-              Professional conference management with stage design,
-              registrations, AV setup, guest management and seamless event
-              execution.
-            </p>
-
-            <ul class="space-y-3 text-slate-300">
+          <!-- Card 2 -->
+          <div class="glass-card group overflow-hidden rounded-2xl p-6 bg-navy-900/10 hover:bg-white/5 hover:backdrop-blur-md hover:shadow-2xl transform group-hover:-translate-y-1 transition duration-300">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="assets/img/service2.png" alt="Conferences" class="w-full h-44 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <span class="text-gold-accent uppercase tracking-[4px] text-sm mb-2 inline-block">Conferences</span>
+            <h4 class="text-xl font-heading font-bold text-navy-900 mb-2">Conferences & Seminars</h4>
+            <p class="text-black text-sm mb-4">Professional conference management with stage design, registrations, AV setup, guest management and seamless event execution.</p>
+            <ul class="text-black space-y-2 mb-4 text-sm">
               <li>✓ Business Conferences</li>
               <li>✓ Leadership Meets</li>
-              <li>✓ Industry Seminars</li>
-              <li>✓ Corporate Workshops</li>
             </ul>
           </div>
 
-          <div class="order-1 lg:order-2 overflow-hidden rounded-3xl group">
-            <img
-              src="assets/img/service2.png"
-              alt="Conference"
-              class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover group-hover:scale-110 transition duration-700"
-            />
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="grid lg:grid-cols-2 gap-14 items-center mb-28">
-          <div class="overflow-hidden rounded-3xl group">
-            <img
-              src="assets/img/service3.png"
-              alt="Product Launch"
-              class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover group-hover:scale-110 transition duration-700"
-            />
-          </div>
-
-          <div>
-            <span class="text-gold-accent uppercase tracking-[4px] text-sm">
-              Product Launches
-            </span>
-
-            <h3 class="text-4xl font-heading font-bold text-white mt-4 mb-6">
-              Product Launch Events
-            </h3>
-
-            <p class="text-slate-400 leading-relaxed mb-6">
-              Create excitement around your brand with unforgettable product
-              launches designed to captivate customers, media and stakeholders.
-            </p>
-
-            <ul class="space-y-3 text-slate-300">
+          <!-- Card 3 -->
+          <div class="glass-card group overflow-hidden rounded-2xl p-6 bg-navy-900/10 hover:bg-white/5 hover:backdrop-blur-md hover:shadow-2xl transform group-hover:-translate-y-1 transition duration-300">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="assets/img/service3.png" alt="Product Launch" class="w-full h-44 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <span class="text-gold-accent uppercase tracking-[4px] text-sm mb-2 inline-block">Product Launches</span>
+            <h4 class="text-xl font-heading font-bold text-navy-900 mb-2">Product Launch Events</h4>
+            <p class="text-black text-sm mb-4">Create excitement around your brand with unforgettable product launches designed to captivate customers, media and stakeholders.</p>
+            <ul class="text-black space-y-2 mb-4 text-sm">
               <li>✓ Product Reveals</li>
-              <li>✓ Media Events</li>
               <li>✓ Brand Activations</li>
-              <li>✓ Experiential Marketing</li>
             </ul>
           </div>
-        </div>
 
-        <!-- Service 4 -->
-        <div class="grid lg:grid-cols-2 gap-14 items-center mb-28">
-          <div class="order-2 lg:order-1">
-            <span class="text-gold-accent uppercase tracking-[4px] text-sm">
-              Exhibitions
-            </span>
-
-            <h3 class="text-4xl font-heading font-bold text-white mt-4 mb-6">
-              Exhibitions & Trade Shows
-            </h3>
-
-            <p class="text-slate-400 leading-relaxed mb-6">
-              Showcase your brand with stunning exhibition booths, creative
-              displays and engaging visitor experiences.
-            </p>
-
-            <ul class="space-y-3 text-slate-300">
+          <!-- Card 4 -->
+          <div class="glass-card group overflow-hidden rounded-2xl p-6 bg-navy-900/10 hover:bg-white/5 hover:backdrop-blur-md hover:shadow-2xl transform group-hover:-translate-y-1 transition duration-300">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="assets/img/service4.png" alt="Exhibitions" class="w-full h-44 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <span class="text-gold-accent uppercase tracking-[4px] text-sm mb-2 inline-block">Exhibitions</span>
+            <h4 class="text-xl font-heading font-bold text-navy-900 mb-2">Exhibitions & Trade Shows</h4>
+            <p class="text-black text-sm mb-4">Showcase your brand with stunning exhibition booths, creative displays and engaging visitor experiences.</p>
+            <ul class="text-black space-y-2 mb-4 text-sm">
               <li>✓ Exhibition Stall Design</li>
               <li>✓ Trade Show Management</li>
-              <li>✓ Expo Coordination</li>
-              <li>✓ Brand Showcases</li>
             </ul>
           </div>
 
-          <div class="order-1 lg:order-2 overflow-hidden rounded-3xl group">
-            <img
-              src="assets/img/service4.png"
-              alt="Exhibition"
-              class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover group-hover:scale-110 transition duration-700"
-            />
-          </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="grid lg:grid-cols-2 gap-14 items-center mb-28">
-          <div class="overflow-hidden rounded-3xl group">
-            <img
-              src="assets/img/service5.png"
-              alt="Employee Engagement"
-              class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover group-hover:scale-110 transition duration-700"
-            />
-          </div>
-
-          <div>
-            <span class="text-gold-accent uppercase tracking-[4px] text-sm">
-              Employee Engagement
-            </span>
-
-            <h3 class="text-4xl font-heading font-bold text-white mt-4 mb-6">
-              Employee Engagement Programs
-            </h3>
-
-            <p class="text-slate-400 leading-relaxed mb-6">
-              Foster collaboration, motivation and team spirit through engaging
-              employee programs and corporate activities.
-            </p>
-
-            <ul class="space-y-3 text-slate-300">
+          <!-- Card 5 -->
+          <div class="glass-card group overflow-hidden rounded-2xl p-6 bg-navy-900/10 hover:bg-white/5 hover:backdrop-blur-md hover:shadow-2xl transform group-hover:-translate-y-1 transition duration-300">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="assets/img/service5.png" alt="Employee Engagement" class="w-full h-44 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <span class="text-gold-accent uppercase tracking-[4px] text-sm mb-2 inline-block">Engagement</span>
+            <h4 class="text-xl font-heading font-bold text-navy-900 mb-2">Employee Engagement Programs</h4>
+            <p class="text-black text-sm mb-4">Foster collaboration, motivation and team spirit through engaging employee programs and corporate activities.</p>
+            <ul class="text-black space-y-2 mb-4 text-sm">
               <li>✓ Team Building Activities</li>
               <li>✓ Annual Day Programs</li>
-              <li>✓ Family Day Events</li>
-              <li>✓ Employee Recognition</li>
             </ul>
           </div>
-        </div>
 
-        <!-- Service 6 -->
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-          <div class="order-2 lg:order-1">
-            <span class="text-gold-accent uppercase tracking-[4px] text-sm">
-              Corporate Gifting
-            </span>
-
-            <h3 class="text-4xl font-heading font-bold text-white mt-4 mb-6">
-              Corporate Gifting Solutions
-            </h3>
-
-            <p class="text-slate-400 leading-relaxed mb-6">
-              Premium customized gifting solutions designed to strengthen
-              relationships with clients, partners and employees.
-            </p>
-
-            <ul class="space-y-3 text-slate-300">
+          <!-- Card 6 -->
+          <div class="glass-card group overflow-hidden rounded-2xl p-6 bg-navy-900/10 hover:bg-white/5 hover:backdrop-blur-md hover:shadow-2xl transform group-hover:-translate-y-1 transition duration-300">
+            <div class="overflow-hidden rounded-lg mb-4">
+              <img src="assets/img/service6.png" alt="Gifting" class="w-full h-44 md:h-52 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <span class="text-gold-accent uppercase tracking-[4px] text-sm mb-2 inline-block">Gifting</span>
+            <h4 class="text-xl font-heading font-bold text-navy-900 mb-2">Corporate Gifting Solutions</h4>
+            <p class="text-black text-sm mb-4">Premium customized gifting solutions designed to strengthen relationships with clients, partners and employees.</p>
+            <ul class="text-black space-y-2 mb-4 text-sm">
               <li>✓ Premium Gift Boxes</li>
-              <li>✓ Festive Gifts</li>
               <li>✓ Employee Welcome Kits</li>
-              <li>✓ Customized Branding</li>
             </ul>
-          </div>
-
-          <div class="order-1 lg:order-2 overflow-hidden rounded-3xl group">
-            <img
-              src="assets/img/service6.png"
-              alt="Corporate Gifting"
-              class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover group-hover:scale-110 transition duration-700"
-            />
           </div>
         </div>
       </div>
@@ -580,11 +451,11 @@
             Service Catalog
           </h2>
           <h3
-            class="text-3xl md:text-5xl font-heading font-bold text-white mb-6"
+            class="text-3xl md:text-5xl font-heading font-bold text-pink-900 mb-6"
           >
             Visual Showcase
           </h3>
-          <p class="text-slate-400">
+          <p class="text-pink-700">
             A glimpse into the specialized categories of events and experiences
             we curate.
           </p>
@@ -596,37 +467,37 @@
           id="catalogTabs"
         >
           <button
-            class="px-6 py-2 rounded-full border border-gold-accent text-navy-950 bg-gold-accent font-medium text-sm transition-all"
+            class="px-6 py-2 rounded-full border border-pink-900 bg-pink-900 text-white font-medium text-sm shadow-lg transition-all hover:bg-pink-800"
             data-target="cat-corporate"
           >
             Corporate Events
           </button>
           <button
-            class="px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:border-gold-accent hover:text-gold-accent font-medium text-sm transition-all"
+            class="px-6 py-2 rounded-full border border-pink-900 bg-white text-pink-900 font-medium text-sm transition-all hover:bg-pink-900 hover:text-white"
             data-target="cat-conferences"
           >
             Conferences
           </button>
           <button
-            class="px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:border-gold-accent hover:text-gold-accent font-medium text-sm transition-all"
+            class="px-6 py-2 rounded-full border border-pink-900 bg-white text-pink-900 font-medium text-sm transition-all hover:bg-pink-900 hover:text-white"
             data-target="cat-launches"
           >
             Product Launches
           </button>
           <button
-            class="px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:border-gold-accent hover:text-gold-accent font-medium text-sm transition-all"
+            class="px-6 py-2 rounded-full border border-pink-900 bg-white text-pink-900 font-medium text-sm transition-all hover:bg-pink-900 hover:text-white"
             data-target="cat-exhibitions"
           >
             Exhibitions
           </button>
           <button
-            class="px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:border-gold-accent hover:text-gold-accent font-medium text-sm transition-all"
+            class="px-6 py-2 rounded-full border border-pink-900 bg-white text-pink-900 font-medium text-sm transition-all hover:bg-pink-900 hover:text-white"
             data-target="cat-engagement"
           >
             Engagement
           </button>
           <button
-            class="px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:border-gold-accent hover:text-gold-accent font-medium text-sm transition-all"
+            class="px-6 py-2 rounded-full border border-pink-900 bg-white text-pink-900 font-medium text-sm transition-all hover:bg-pink-900 hover:text-white"
             data-target="cat-gifting"
           >
             Gifting
@@ -646,13 +517,11 @@
               alt="Annual Day"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Corporate Events
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -668,13 +537,11 @@
               alt="Leadership Summit"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Corporate Events
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -690,13 +557,11 @@
               alt="Awards Night"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Corporate Events
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -714,13 +579,11 @@
               alt="Conference Stage"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Conferences
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -736,13 +599,11 @@
               alt="Business Seminar"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Conferences
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -760,13 +621,11 @@
               alt="Product Reveal Stage"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Product Launches
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -782,13 +641,11 @@
               alt="Brand Activation"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Product Launches
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -806,13 +663,11 @@
               alt="Exhibition Stall Design"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Exhibitions
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -830,13 +685,11 @@
               alt="Team Building"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Employee Engagement
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -854,13 +707,11 @@
               alt="Corporate Gifting"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
-            ></div>
+            <div class="absolute inset-x-0 bottom-0 h-5/6 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
             <div
               class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              <p class="text-gold-accent text-sm font-semibold mb-1">
+              <p class="text-white text-sm font-semibold mb-1">
                 Corporate Gifting
               </p>
               <h4 class="text-white text-xl font-heading font-bold">
@@ -873,9 +724,9 @@
     </section>
 
     <!-- Why Zeptra & Process Section -->
-    <section id="process" class="py-24 bg-navy-900 relative overflow-hidden">
+    <section id="process" class="py-24 bg-[rgb(244_225_194_/_73%)] relative overflow-hidden">
       <div
-        class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gold-accent/5 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2"
+        class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-amber-200/40 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2"
       ></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -883,12 +734,12 @@
           <!-- Why Zeptra -->
           <div class="reveal">
             <h2
-              class="text-gold-accent font-semibold tracking-widest uppercase text-sm mb-2"
+              class="text-amber-900 font-semibold tracking-widest uppercase text-sm mb-2"
             >
               The ZEPTRA Advantage
             </h2>
             <h3
-              class="text-3xl md:text-4xl font-heading font-bold text-white mb-8"
+              class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-8"
             >
               Why Choose Us?
             </h3>
@@ -902,10 +753,10 @@
                   </div>
                 </div>
                 <div class="ml-4">
-                  <h4 class="text-lg font-heading font-semibold text-white">
+                  <h4 class="text-lg font-heading font-semibold text-slate-900">
                     Strategic Planning
                   </h4>
-                  <p class="text-sm text-slate-400 mt-1">
+                  <p class="text-sm text-slate-700 mt-1">
                     Meticulous attention to detail aligned with your
                     organizational goals.
                   </p>
@@ -920,10 +771,10 @@
                   </div>
                 </div>
                 <div class="ml-4">
-                  <h4 class="text-lg font-heading font-semibold text-white">
+                  <h4 class="text-lg font-heading font-semibold text-slate-900">
                     Seamless Execution
                   </h4>
-                  <p class="text-sm text-slate-400 mt-1">
+                  <p class="text-sm text-slate-700 mt-1">
                     Flawless operations management ensuring zero friction on the
                     ground.
                   </p>
@@ -938,10 +789,10 @@
                   </div>
                 </div>
                 <div class="ml-4">
-                  <h4 class="text-lg font-heading font-semibold text-white">
+                  <h4 class="text-lg font-heading font-semibold text-slate-900">
                     Premium Brand Experience
                   </h4>
-                  <p class="text-sm text-slate-400 mt-1">
+                  <p class="text-sm text-slate-700 mt-1">
                     Elevating perceptions through sophisticated design and
                     premium touchpoints.
                   </p>
@@ -956,10 +807,10 @@
                   </div>
                 </div>
                 <div class="ml-4">
-                  <h4 class="text-lg font-heading font-semibold text-white">
+                  <h4 class="text-lg font-heading font-semibold text-slate-900">
                     Customized Solutions
                   </h4>
-                  <p class="text-sm text-slate-400 mt-1">
+                  <p class="text-sm text-slate-700 mt-1">
                     Bespoke concepts tailored specifically to your audience and
                     budget.
                   </p>
@@ -971,12 +822,12 @@
           <!-- Process -->
           <div class="reveal delay-200">
             <h2
-              class="text-gold-accent font-semibold tracking-widest uppercase text-sm mb-2"
+              class="text-amber-900 font-semibold tracking-widest uppercase text-sm mb-2"
             >
               Our Methodology
             </h2>
             <h3
-              class="text-3xl md:text-4xl font-heading font-bold text-white mb-8"
+              class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-8"
             >
               How We Work
             </h3>
@@ -988,19 +839,19 @@
                 <!-- Steps... -->
                 <div class="flex items-start group">
                   <div
-                    class="flex-shrink-0 w-12 h-12 rounded-full bg-navy-900 border-2 border-gold-accent flex items-center justify-center z-10 group-hover:bg-gold-accent group-hover:text-navy-950 transition-colors font-bold text-lg"
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 border-2 border-amber-300 flex items-center justify-center z-10 group-hover:bg-amber-300 group-hover:text-slate-950 transition-colors font-bold text-lg"
                   >
                     1
                   </div>
                   <div
-                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-white/5 group-hover:border-gold-accent/30 transition-colors"
+                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-amber-400 group-hover:border-amber-500 transition-colors"
                   >
                     <h4
-                      class="text-xl font-heading font-semibold text-white mb-1"
+                      class="text-xl font-heading font-semibold text-slate-900 mb-1"
                     >
                       Understand
                     </h4>
-                    <p class="text-sm text-slate-400">
+                    <p class="text-sm text-slate-700">
                       Deep dive into your objectives, brand identity, and
                       audience expectations.
                     </p>
@@ -1008,19 +859,19 @@
                 </div>
                 <div class="flex items-start group">
                   <div
-                    class="flex-shrink-0 w-12 h-12 rounded-full bg-navy-900 border-2 border-gold-accent/50 flex items-center justify-center z-10 group-hover:bg-gold-accent group-hover:border-gold-accent group-hover:text-navy-950 transition-colors font-bold text-lg"
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 border-2 border-amber-400 flex items-center justify-center z-10 group-hover:bg-amber-300 group-hover:border-amber-300 group-hover:text-slate-950 transition-colors font-bold text-lg"
                   >
                     2
                   </div>
                   <div
-                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-white/5 group-hover:border-gold-accent/30 transition-colors"
+                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-amber-400 group-hover:border-amber-500 transition-colors"
                   >
                     <h4
-                      class="text-xl font-heading font-semibold text-white mb-1"
+                      class="text-xl font-heading font-semibold text-slate-900 mb-1"
                     >
                       Plan
                     </h4>
-                    <p class="text-sm text-slate-400">
+                    <p class="text-sm text-slate-700">
                       Strategic conceptualization, budgeting, and comprehensive
                       resource mapping.
                     </p>
@@ -1028,19 +879,19 @@
                 </div>
                 <div class="flex items-start group">
                   <div
-                    class="flex-shrink-0 w-12 h-12 rounded-full bg-navy-900 border-2 border-gold-accent/30 flex items-center justify-center z-10 group-hover:bg-gold-accent group-hover:border-gold-accent group-hover:text-navy-950 transition-colors font-bold text-lg"
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 border-2 border-amber-400 flex items-center justify-center z-10 group-hover:bg-amber-300 group-hover:border-amber-300 group-hover:text-slate-950 transition-colors font-bold text-lg"
                   >
                     3
                   </div>
                   <div
-                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-white/5 group-hover:border-gold-accent/30 transition-colors"
+                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-amber-400 group-hover:border-amber-500 transition-colors"
                   >
                     <h4
-                      class="text-xl font-heading font-semibold text-white mb-1"
+                      class="text-xl font-heading font-semibold text-slate-900 mb-1"
                     >
                       Execute
                     </h4>
-                    <p class="text-sm text-slate-400">
+                    <p class="text-sm text-slate-700">
                       Precision management of vendors, logistics, and on-ground
                       operations.
                     </p>
@@ -1048,19 +899,19 @@
                 </div>
                 <div class="flex items-start group">
                   <div
-                    class="flex-shrink-0 w-12 h-12 rounded-full bg-navy-900 border-2 border-gold-accent/10 flex items-center justify-center z-10 group-hover:bg-gold-accent group-hover:border-gold-accent group-hover:text-navy-950 transition-colors font-bold text-lg"
+                    class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 border-2 border-amber-400 flex items-center justify-center z-10 group-hover:bg-amber-300 group-hover:border-amber-300 group-hover:text-slate-950 transition-colors font-bold text-lg"
                   >
                     4
                   </div>
                   <div
-                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-white/5 group-hover:border-gold-accent/30 transition-colors"
+                    class="ml-6 glass-card p-5 rounded-xl flex-grow border-amber-400 group-hover:border-amber-500 transition-colors"
                   >
                     <h4
-                      class="text-xl font-heading font-semibold text-white mb-1"
+                      class="text-xl font-heading font-semibold text-slate-900 mb-1"
                     >
                       Deliver
                     </h4>
-                    <p class="text-sm text-slate-400">
+                    <p class="text-sm text-slate-700">
                       Flawless culmination resulting in an unforgettable premium
                       experience.
                     </p>
@@ -1077,17 +928,17 @@
     <section id="portfolio" class="py-24 bg-navy-950 relative hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-          <h2
-            class="text-gold-accent font-semibold tracking-widest uppercase text-sm mb-2"
-          >
+          <h4
+              class="text-4xl lg:text-5xl font-heading font-bold text-pink-900 mb-2"
+            >
             Portfolio
           </h2>
           <h3
-            class="text-3xl md:text-5xl font-heading font-bold text-white mb-6"
+            class="text-3xl md:text-5xl font-heading font-bold text-pink-900 mb-6"
           >
             Experiences We Have Delivered
           </h3>
-          <p class="text-slate-400">
+          <p class="text-pink-700">
             A curated selection of our most impactful and memorable projects.
           </p>
         </div>
@@ -1101,7 +952,7 @@
             class="glass-card p-8 rounded-2xl text-center border-t-2 border-gold-accent/50 shadow-lg shadow-gold-accent/5"
           >
             <h4
-              class="text-4xl lg:text-5xl font-heading font-bold text-white mb-2"
+              class="text-4xl lg:text-5xl font-heading font-bold text-pink-900 mb-2"
             >
               <span class="counter" data-target="100">0</span>+
             </h4>
@@ -1115,7 +966,7 @@
             class="glass-card p-8 rounded-2xl text-center border-t-2 border-gold-accent/50 shadow-lg shadow-gold-accent/5"
           >
             <h4
-              class="text-4xl lg:text-5xl font-heading font-bold text-white mb-2"
+              class="text-4xl lg:text-5xl font-heading font-bold text-pink-900 mb-2"
             >
               <span class="counter" data-target="50">0</span>+
             </h4>
@@ -1129,8 +980,8 @@
             class="glass-card p-8 rounded-2xl text-center border-t-2 border-gold-accent/50 shadow-lg shadow-gold-accent/5"
           >
             <h4
-              class="text-4xl lg:text-5xl font-heading font-bold text-white mb-2"
-            >
+                class="text-4xl lg:text-5xl font-heading font-bold text-pink-900 mb-2"
+              >
               <span class="counter" data-target="10">0</span>+
             </h4>
             <p
@@ -1143,7 +994,7 @@
             class="glass-card p-8 rounded-2xl text-center border-t-2 border-gold-accent/50 shadow-lg shadow-gold-accent/5"
           >
             <h4
-              class="text-4xl lg:text-5xl font-heading font-bold text-white mb-2"
+              class="text-4xl lg:text-5xl font-heading font-bold text-pink-900 mb-2"
             >
               <span class="counter" data-target="95">0</span>%
             </h4>
@@ -1177,15 +1028,15 @@
               <p class="text-gold-accent text-sm font-semibold mb-2">
                 IT & Software Industry
               </p>
-              <h4 class="text-2xl font-heading font-bold text-white mb-3">
+              <h4 class="text-2xl font-heading font-bold text-pink-900 mb-3">
                 Global Tech Summit 2023
               </h4>
-              <p class="text-slate-400 text-sm mb-4">
+              <p class="text-pink-700 text-sm mb-4">
                 A comprehensive 3-day tech summit featuring global speakers,
                 interactive zones, and a gala dinner for 500+ delegates.
               </p>
               <div
-                class="flex items-center text-xs text-slate-500 font-medium space-x-4"
+                class="flex items-center text-xs text-pink-600 font-medium space-x-4"
               >
                 <span
                   ><i class="fas fa-users text-gold-accent/70 mr-1"></i> 500+
@@ -1220,15 +1071,15 @@
               <p class="text-gold-accent text-sm font-semibold mb-2">
                 Automotive Industry
               </p>
-              <h4 class="text-2xl font-heading font-bold text-white mb-3">
+              <h4 class="text-2xl font-heading font-bold text-pink-900 mb-3">
                 Premium EV Launch Event
               </h4>
-              <p class="text-slate-400 text-sm mb-4">
+              <p class="text-pink-700 text-sm mb-4">
                 A high-octane product reveal featuring holographic displays,
                 media zones, and an exclusive test-drive track.
               </p>
               <div
-                class="flex items-center text-xs text-slate-500 font-medium space-x-4"
+                class="flex items-center text-xs text-pink-600 font-medium space-x-4"
               >
                 <span
                   ><i class="fas fa-users text-gold-accent/70 mr-1"></i> 300+
@@ -1266,7 +1117,7 @@
             Testimonials
           </h2>
           <h3
-            class="text-3xl md:text-5xl font-heading font-bold text-white mb-6"
+            class="text-3xl md:text-5xl font-heading font-bold text-pink-900 mb-6"
           >
             What Our Clients Say
           </h3>
@@ -1288,7 +1139,7 @@
               ><i class="fas fa-star"></i><i class="fas fa-star"></i
               ><i class="fas fa-star"></i>
             </div>
-            <p class="text-slate-300 italic mb-8 relative z-10">
+            <p class="text-pink-600 italic mb-8 relative z-10">
               "We partnered with ZEPTRA for our annual leadership summit and the
               execution was flawless. Their attention to detail is unmatched."
             </p>
@@ -1306,7 +1157,7 @@
                 <h5 class="text-white font-heading font-semibold text-sm">
                   Rajiv Sharma
                 </h5>
-                <p class="text-slate-500 text-xs">
+                <p class="text-pink-600 text-xs">
                   Director of Operations, TechCorp
                 </p>
               </div>
@@ -1324,7 +1175,7 @@
               ><i class="fas fa-star"></i><i class="fas fa-star"></i
               ><i class="fas fa-star"></i>
             </div>
-            <p class="text-slate-300 italic mb-8 relative z-10">
+            <p class="text-pink-600 italic mb-8 relative z-10">
               "Outstanding event planning and excellent attention to detail.
               Highly recommended for any corporate requirements."
             </p>
@@ -1342,7 +1193,7 @@
                 <h5 class="text-white font-heading font-semibold text-sm">
                   Anita Desai
                 </h5>
-                <p class="text-slate-500 text-xs">
+                <p class="text-pink-600 text-xs">
                   Marketing Head, FinServe India
                 </p>
               </div>
@@ -1360,7 +1211,7 @@
               ><i class="fas fa-star"></i><i class="fas fa-star"></i
               ><i class="fas fa-star"></i>
             </div>
-            <p class="text-slate-300 italic mb-8 relative z-10">
+            <p class="text-pink-600 italic mb-8 relative z-10">
               "Their team transformed our product launch into an unforgettable
               brand experience. The creative concepts were brilliant."
             </p>
@@ -1378,7 +1229,7 @@
                 <h5 class="text-white font-heading font-semibold text-sm">
                   Vikram Mehta
                 </h5>
-                <p class="text-slate-500 text-xs">CEO, AutoDynamics</p>
+                <p class="text-pink-600 text-xs">CEO, AutoDynamics</p>
               </div>
             </div>
           </div>
@@ -1392,10 +1243,10 @@
     </section>
 
     <!-- Client Logo Section -->
-    <section class="py-16 bg-navy-950 border-t border-b border-white/5 hidden">
+    <section class="py-16 bg-navy-950 border-t border-b border-pink-100 hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3
-          class="text-center text-sm font-semibold text-slate-500 tracking-widest uppercase mb-10"
+          class="text-center text-sm font-semibold text-pink-600 tracking-widest uppercase mb-10"
         >
           Trusted By Leading Organizations
         </h3>
@@ -1455,7 +1306,7 @@
             >
               Event Gallery
             </h2>
-            <h3 class="text-3xl md:text-5xl font-heading font-bold text-white">
+            <h3 class="text-3xl md:text-5xl font-heading font-bold text-pink-900">
               Visual Stories
             </h3>
           </div>
@@ -1463,7 +1314,7 @@
           <div class="mt-6 md:mt-0">
             <select
               id="galleryFilter"
-              class="bg-navy-950 border border-white/10 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:border-gold-accent transition-colors"
+              class="bg-navy-950 border border-pink-100 rounded-lg px-4 py-2 text-pink-900 text-sm focus:outline-none focus:border-gold-accent transition-colors"
             >
               <option value="all">All Categories</option>
               <option value="gal-events">Events</option>
@@ -1491,7 +1342,7 @@
             <div
               class="absolute inset-0 bg-navy-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4"
             >
-              <h5 class="text-white font-heading font-bold mb-1">
+              <h5 class="text-pink-900 font-heading font-bold mb-1">
                 Gala Dinner
               </h5>
               <p class="text-gold-accent text-xs">500+ Attendees</p>
@@ -1508,7 +1359,7 @@
             <div
               class="absolute inset-0 bg-navy-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4"
             >
-              <h5 class="text-white font-heading font-bold mb-1">
+              <h5 class="text-pink-900 font-heading font-bold mb-1">
                 Tech Summit
               </h5>
               <p class="text-gold-accent text-xs">Main Stage Setup</p>
@@ -1525,7 +1376,7 @@
             <div
               class="absolute inset-0 bg-navy-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4"
             >
-              <h5 class="text-white font-heading font-bold mb-1">
+              <h5 class="text-pink-900 font-heading font-bold mb-1">
                 Auto Launch
               </h5>
               <p class="text-gold-accent text-xs">Product Reveal</p>
@@ -1542,7 +1393,7 @@
             <div
               class="absolute inset-0 bg-navy-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4"
             >
-              <h5 class="text-white font-heading font-bold mb-1">Trade Show</h5>
+              <h5 class="text-pink-900 font-heading font-bold mb-1">Trade Show</h5>
               <p class="text-gold-accent text-xs">Custom Stall Design</p>
             </div>
           </div>
@@ -1557,7 +1408,7 @@
             <div
               class="absolute inset-0 bg-navy-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4"
             >
-              <h5 class="text-white font-heading font-bold mb-1">
+              <h5 class="text-pink-900 font-heading font-bold mb-1">
                 Team Retreat
               </h5>
               <p class="text-gold-accent text-xs">Outdoor Activities</p>
@@ -1574,7 +1425,7 @@
             <div
               class="absolute inset-0 bg-navy-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4"
             >
-              <h5 class="text-white font-heading font-bold mb-1">
+              <h5 class="text-pink-900 font-heading font-bold mb-1">
                 Awards Night
               </h5>
               <p class="text-gold-accent text-xs">Corporate Recognition</p>
@@ -1585,10 +1436,10 @@
     </section>
 
     <!-- Location Section -->
-    <section class="relative h-96 border-t border-b border-white/5">
+    <section class="relative h-96 border-t border-b border-pink-100">
       <div class="absolute inset-0 z-10 pointer-events-none">
         <div
-          class="h-full w-full bg-gradient-to-r from-navy-950 via-navy-950/50 to-transparent"
+          class="h-full w-full from-navy-950 via-navy-950/50 to-transparent"
         ></div>
       </div>
       <div class="absolute inset-0">
@@ -1597,41 +1448,17 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24257.43134423277!2d77.69516731122168!3d12.993044438735806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11965d817ded%3A0x5f6cdae71b4b08f!2sArdente%20Office%20One%20Tower-2%2C%20SMR%20Vinay%20Endevor%2C%20Whitefield%20Main%20Rd%2C%20Hoodi%2C%20Mahadevapura%2C%20Bengaluru%2C%20Karnataka%20560048!5e1!3m2!1sen!2sin!4v1781521135358!5m2!1sen!2sin"
           width="100%"
           height="100%"
-          style="border: 0; filter: grayscale(100%) invert(90%) contrast(1.2)"
+          style="border: 0; filter: invert(90%) contrast(1.2)"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div
-        class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center"
-      >
-        <div class="glass-card p-8 rounded-2xl max-w-sm reveal">
-          <h3 class="text-2xl font-heading font-bold text-white mb-2">
-            Visit Our Office
-          </h3>
-          <div class="w-12 h-1 bg-gold-accent mb-6"></div>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            <strong class="text-white">CapitalAK Global Solution LLP</strong
-            ><br />
-            2nd Floor, Tower B,<br />
-            Ardente Office One,<br />
-            Hoodi, Bengaluru – 560048,<br />
-            Karnataka, India
-          </p>
-          <a
-            href="https://maps.google.com/?q=Ardente+Office+One,+Hoodi,+Bengaluru"
-            target="_blank"
-            class="inline-flex items-center text-sm font-semibold text-navy-950 bg-gold-accent px-5 py-2.5 rounded-lg hover:bg-gold-400 transition-colors shadow-lg"
-          >
-            <i class="fas fa-directions mr-2"></i> Get Directions
-          </a>
-        </div>
-      </div>
+
     </section>
 
     <!-- Contact CTA Section -->
-    <section id="contact" class="py-24 bg-navy-950 relative">
+    <section id="contact" class="py-24 relative">
       <!-- Abstract visual background elements -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -1644,17 +1471,17 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div
-          class="glass-card rounded-3xl p-8 md:p-16 border border-gold-accent/20 bg-gradient-to-br from-navy-800/80 to-navy-950/80 shadow-2xl reveal"
+          class="glass-card rounded-3xl p-8 md:p-16 border border-gray-300 bg-white shadow-lg reveal"
         >
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2
-                class="text-3xl md:text-5xl font-heading font-bold text-white mb-6"
+                class="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-6 "
               >
                 Let's plan your next
                 <span class="gold-gradient-text">corporate experience.</span>
               </h2>
-              <p class="text-slate-400 mb-8 text-lg">
+              <p class="text-gray-700 mb-8 text-lg">
                 Ready to elevate your next event or gifting program? Connect
                 with our experts to discuss your requirements.
               </p>
@@ -1662,47 +1489,47 @@
               <div class="space-y-6">
                 <div class="flex items-center group">
                   <div
-                    class="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center border border-white/10 group-hover:border-gold-accent/50 transition-colors"
+                    class="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center border border-pink-100 group-hover:border-gold-accent/50 transition-colors"
                   >
                     <i class="fas fa-envelope text-gold-accent"></i>
                   </div>
                   <div class="ml-4">
-                    <p class="text-xs text-slate-500 uppercase tracking-wider">
+                    <p class="text-xs text-gray-600 uppercase tracking-wider">
                       Email Us
                     </p>
                     <a
                       href="mailto:capitalakcs@gmail.com"
-                      class="text-white hover:text-gold-accent transition-colors font-medium"
+                      class="text-gray-900 hover:text-gold-accent transition-colors font-medium"
                       >capitalakcs@gmail.com</a
                     >
                   </div>
                 </div>
                 <div class="flex items-center group">
                   <div
-                    class="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center border border-white/10 group-hover:border-gold-accent/50 transition-colors"
+                    class="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center border border-pink-100 group-hover:border-gold-accent/50 transition-colors"
                   >
                     <i class="fas fa-phone-alt text-gold-accent"></i>
                   </div>
                   <div class="ml-4">
-                    <p class="text-xs text-slate-500 uppercase tracking-wider">
+                    <p class="text-xs text-gray-600 uppercase tracking-wider">
                       Call Us
                     </p>
                     <div
-                      class="flex flex-col sm:flex-row sm:gap-4 text-white font-medium"
+                      class="flex flex-col sm:flex-row sm:gap-4 text-gray-900 font-medium"
                     >
                       <a
                         href="tel:+919944052611"
                         class="hover:text-gold-accent transition-colors"
                         >+91 99440 52611</a
                       >
-                      <span class="hidden sm:inline text-slate-600">|</span>
+                      <span class="hidden sm:inline text-gray-600">|</span>
                       <a
                         href="tel:+919566441497"
                         class="hover:text-gold-accent transition-colors"
                         >+91 95664 41497</a
                       >
                     </div>
-                    <div class="text-white font-medium mt-1">
+                    <div class="text-gray-900 font-medium mt-1">
                       <a
                         href="tel:+919597235493"
                         class="hover:text-gold-accent transition-colors"
@@ -1712,7 +1539,7 @@
                   </div>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-white/10">
+                <div class="mt-8 pt-6 border-t border-gray-300">
                   <a
                     href="https://wa.me/919944052611"
                     target="_blank"
@@ -1727,31 +1554,31 @@
 
             <!-- Contact Form Block -->
             <div
-              class="bg-navy-950 p-8 rounded-2xl border border-white/5 shadow-xl"
+              class="bg-white p-8 rounded-2xl border border-gray-300 shadow-lg"
             >
-              <h3 class="text-2xl font-heading font-semibold text-white mb-6">
+              <h3 class="text-2xl font-heading font-semibold text-gray-900 mb-6">
                 Request a Proposal
               </h3>
               <form class="space-y-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-sm font-medium text-slate-400 mb-1"
+                    <label class="block text-sm font-medium text-pink-700 mb-1"
                       >Full Name *</label
                     >
                     <input
                       type="text"
-                      class="w-full bg-navy-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
+                      class="w-full bg-white border border-pink-100 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
                       placeholder="John Doe"
                       required
                     />
                   </div>
                   <div>
-                    <label class="block text-sm font-medium text-slate-400 mb-1"
+                    <label class="block text-sm font-medium text-pink-700 mb-1"
                       >Company Name *</label
                     >
                     <input
                       type="text"
-                      class="w-full bg-navy-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
+                      class="w-full bg-white border border-pink-100 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
                       placeholder="Your Organization"
                       required
                     />
@@ -1759,23 +1586,23 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-sm font-medium text-slate-400 mb-1"
+                    <label class="block text-sm font-medium text-pink-700 mb-1"
                       >Email Address *</label
                     >
                     <input
                       type="email"
-                      class="w-full bg-navy-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
+                      class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
                       placeholder="john@company.com"
                       required
                     />
                   </div>
                   <div>
-                    <label class="block text-sm font-medium text-slate-400 mb-1"
+                    <label class="block text-sm font-medium text-pink-700 mb-1"
                       >Phone Number *</label
                     >
                     <input
                       type="tel"
-                      class="w-full bg-navy-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
+                      class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
                       placeholder="+91 XXXXX XXXXX"
                       required
                     />
@@ -1783,11 +1610,11 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-sm font-medium text-slate-400 mb-1"
+                    <label class="block text-sm font-medium text-pink-700 mb-1"
                       >Event Type</label
                     >
                     <select
-                      class="w-full bg-navy-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors appearance-none"
+                      class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors appearance-none"
                     >
                       <option>Corporate Events</option>
                       <option>Conferences</option>
@@ -1798,11 +1625,11 @@
                     </select>
                   </div>
                   <div>
-                    <label class="block text-sm font-medium text-slate-400 mb-1"
+                    <label class="block text-sm font-medium text-pink-700 mb-1"
                       >Estimated Budget</label
                     >
                     <select
-                      class="w-full bg-navy-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors appearance-none"
+                      class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors appearance-none"
                     >
                       <option>Under ₹5 Lakhs</option>
                       <option>₹5 Lakhs - ₹15 Lakhs</option>
@@ -1812,18 +1639,18 @@
                   </div>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-slate-400 mb-1"
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
                     >Additional Details</label
                   >
                   <textarea
                     rows="3"
-                    class="w-full bg-navy-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
+                    class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-gold-accent focus:ring-1 focus:ring-gold-accent transition-colors"
                     placeholder="Tell us about your requirements..."
                   ></textarea>
                 </div>
                 <button
                   type="button"
-                  class="w-full mt-2 bg-gold-accent text-navy-950 font-bold py-4 rounded-lg hover:bg-gold-400 transition-colors shadow-lg shadow-gold-accent/20"
+                  class="w-full mt-2 bg-pink-900 text-white font-semibold py-3 rounded-full hover:bg-pink-800 transition-all shadow-lg"
                 >
                   Request Proposal
                 </button>
@@ -1836,7 +1663,7 @@
 
     <!-- Footer -->
     <footer
-      class="bg-navy-950 pt-16 pb-8 border-t border-white/10 relative overflow-hidden"
+      class="bg-navy-950 pt-16 pb-8 border-t border-pink-100 relative overflow-hidden"
     >
       <div
         class="absolute bottom-0 right-0 w-64 h-64 bg-gold-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"
@@ -1849,30 +1676,30 @@
           <!-- Brand -->
           <div>
             <span
-              class="font-heading font-bold text-3xl tracking-wider text-white mb-6 inline-block"
+              class="font-heading font-bold text-3xl tracking-wider text-pink-900 mb-6 inline-block"
             >
               ZEPTRA<span class="text-gold-accent">.</span>
             </span>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            <p class="text-gray-700 text-sm leading-relaxed mb-6">
               Your premier corporate event, engagement, and customized gifting
               partner. We transform visions into unforgettable realities.
             </p>
             <div class="flex space-x-4">
               <a
                 href="#"
-                class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-slate-400 hover:text-gold-accent hover:bg-navy-800 border border-white/5 transition-all"
+                class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-pink-600 hover:text-gold-accent hover:bg-navy-800 border border-pink-100 transition-all"
               >
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a
                 href="#"
-                class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-slate-400 hover:text-gold-accent hover:bg-navy-800 border border-white/5 transition-all"
+                class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-pink-600 hover:text-gold-accent hover:bg-navy-800 border border-pink-100 transition-all"
               >
                 <i class="fab fa-instagram"></i>
               </a>
               <a
                 href="#"
-                class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-slate-400 hover:text-gold-accent hover:bg-navy-800 border border-white/5 transition-all"
+                class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-pink-600 hover:text-gold-accent hover:bg-navy-800 border border-pink-100 transition-all"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
@@ -1882,7 +1709,7 @@
           <!-- Quick Links -->
           <div>
             <h4
-              class="text-white font-heading font-semibold text-lg mb-6 border-b border-white/10 pb-2 inline-block"
+              class="text-pink-900 font-heading font-semibold text-lg mb-6 border-b border-pink-100 pb-2 inline-block"
             >
               Quick Links
             </h4>
@@ -1890,7 +1717,7 @@
               <li>
                 <a
                   href="#about"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1900,7 +1727,7 @@
               <li>
                 <a
                   href="#portfolio"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1910,7 +1737,7 @@
               <li>
                 <a
                   href="#gallery"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1920,7 +1747,7 @@
               <li>
                 <a
                   href="#process"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1933,7 +1760,7 @@
           <!-- Services -->
           <div>
             <h4
-              class="text-white font-heading font-semibold text-lg mb-6 border-b border-white/10 pb-2 inline-block"
+              class="text-pink-900 font-heading font-semibold text-lg mb-6 border-b border-pink-100 pb-2 inline-block"
             >
               Our Services
             </h4>
@@ -1941,7 +1768,7 @@
               <li>
                 <a
                   href="#services"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1951,7 +1778,7 @@
               <li>
                 <a
                   href="#services"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1961,7 +1788,7 @@
               <li>
                 <a
                   href="#services"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1971,7 +1798,7 @@
               <li>
                 <a
                   href="#services"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   ><i
                     class="fas fa-chevron-right text-xs text-gold-accent/50 mr-2"
                   ></i
@@ -1984,14 +1811,14 @@
           <!-- Contact Info -->
           <div>
             <h4
-              class="text-white font-heading font-semibold text-lg mb-6 border-b border-white/10 pb-2 inline-block"
+              class="text-pink-900 font-heading font-semibold text-lg mb-6 border-b border-pink-100 pb-2 inline-block"
             >
               Contact Info
             </h4>
             <ul class="space-y-4">
               <li class="flex items-start">
                 <i class="fas fa-map-marker-alt text-gold-accent mt-1 mr-3"></i>
-                <p class="text-sm text-slate-400">
+                <p class="text-sm text-gray-600">
                   CapitalAK Global Solution LLP, 2nd Floor, Tower B, Ardente
                   Office One, Hoodi, Bengaluru – 560048
                 </p>
@@ -2000,13 +1827,13 @@
                 <i class="fas fa-envelope text-gold-accent mr-3"></i>
                 <a
                   href="mailto:capitalakcs@gmail.com"
-                  class="text-sm text-slate-400 hover:text-gold-accent transition-colors"
+                  class="text-sm text-gray-600 hover:text-gold-accent transition-colors"
                   >capitalakcs@gmail.com</a
                 >
               </li>
               <li class="flex items-center">
                 <i class="fas fa-phone-alt text-gold-accent mr-3"></i>
-                <p class="text-sm text-slate-400">
+                <p class="text-sm text-gray-600">
                   +91 99440 52611 <br />
                   +91 95664 41497
                 </p>
@@ -2016,21 +1843,21 @@
         </div>
 
         <div
-          class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          class="border-t border-pink-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p class="text-slate-500 text-sm text-center md:text-left">
+          <p class="text-pink-600 text-sm text-center md:text-left">
             &copy; <span id="year"></span> CapitalAK Global Solution LLP. All
             rights reserved.
           </p>
           <div class="flex space-x-6">
             <a
               href="#"
-              class="text-xs text-slate-500 hover:text-white transition-colors"
+              class="text-xs text-pink-600 hover:text-white transition-colors"
               >Privacy Policy</a
             >
             <a
               href="#"
-              class="text-xs text-slate-500 hover:text-white transition-colors"
+              class="text-xs text-pink-600 hover:text-white transition-colors"
               >Terms of Service</a
             >
           </div>
@@ -2049,33 +1876,33 @@
 
     <!-- Mobile Bottom Nav -->
     <nav
-      class="lg:hidden fixed bottom-0 w-full z-50 bg-navy-950/95 backdrop-blur-lg border-t border-white/10"
+      class="lg:hidden fixed bottom-0 w-full z-50 bg-navy-950/95 backdrop-blur-lg border-t border-pink-100"
     >
       <div class="flex justify-around items-center h-20 px-2">
         <a
           href="#about"
-          class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-gold-accent transition-colors"
+          class="flex flex-col items-center justify-center w-full h-full text-pink-600 hover:text-gold-accent transition-colors"
         >
           <i class="fas fa-info-circle text-xl mb-1"></i>
           <span class="text-[11px] font-medium">About</span>
         </a>
         <a
           href="#services"
-          class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-gold-accent transition-colors"
+          class="flex flex-col items-center justify-center w-full h-full text-pink-600 hover:text-gold-accent transition-colors"
         >
           <i class="fas fa-concierge-bell text-xl mb-1"></i>
           <span class="text-[11px] font-medium">Services</span>
         </a>
         <a
           href="#service-catalog"
-          class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-gold-accent transition-colors"
+          class="flex flex-col items-center justify-center w-full h-full text-pink-600 hover:text-gold-accent transition-colors"
         >
           <i class="fas fa-images text-xl mb-1"></i>
           <span class="text-[11px] font-medium">Gallery</span>
         </a>
         <a
           href="#contact"
-          class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-gold-accent transition-colors"
+          class="flex flex-col items-center justify-center w-full h-full text-pink-600 hover:text-gold-accent transition-colors"
         >
           <i class="fas fa-envelope text-xl mb-1"></i>
           <span class="text-[11px] font-medium">Contact</span>
@@ -2129,19 +1956,13 @@
 
       tabBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
-          // Remove active classes from all buttons
           tabBtns.forEach((b) => {
-            b.classList.remove("catalog-tab-active");
-            b.classList.remove(
-              "bg-gold-accent",
-              "text-navy-950",
-              "border-gold-accent",
-            );
-            b.classList.add("border-slate-600", "text-slate-300");
+            b.classList.remove("bg-pink-900", "text-white", "shadow-lg");
+            b.classList.add("bg-white", "text-pink-900");
           });
-          // Add active class to clicked button
-          btn.classList.remove("border-slate-600", "text-slate-300");
-          btn.classList.add("catalog-tab-active");
+
+          btn.classList.remove("bg-white", "text-pink-900");
+          btn.classList.add("bg-pink-900", "text-white", "shadow-lg");
 
           const target = btn.getAttribute("data-target");
 
